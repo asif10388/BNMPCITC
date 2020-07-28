@@ -1,0 +1,25 @@
+@import "../../../variables.scss";
+
+.custom-css {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.002),
+    0 12.3px 17.9px rgba(0, 0, 0, 0.072), 0 11.8px 33.4px rgba(0, 0, 0, 0.056),
+    0 50px 80px rgba(0, 0, 0, 0.0012);
+  // box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+}
+
+.schedule_read-more_button {
+  background-color: $color-primary;
+  font-family: $cta-font;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 380px) {
+  .custom-wrap {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

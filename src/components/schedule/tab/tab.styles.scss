@@ -1,0 +1,29 @@
+@import "../../../variables.scss";
+
+.tab-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .tab-list {
+    flex-direction: row;
+  }
+}
+
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+  padding: 0.5rem 0.95rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.tab-list-active {
+  background-color: #2388f9;
+  border-radius: 10px;
+  color: white;
+  transition: all 0.5s;
+}
