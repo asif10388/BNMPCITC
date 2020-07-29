@@ -30,7 +30,7 @@ class Schedule extends React.Component {
             <div class="flex mx-auto flex-wrap">
               <Tabs>
                 <div label="First Day">
-                  <div className="container px-5 py-2 mx-auto">
+                  <div className="container px-5 py-2 mx-auto description">
                     <div class="flex sm:flex-nowrap text-center items-center custom-wrap">
                       <div class="p-4 sm:w-1/4 w-full">
                         <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900 header-css">
@@ -42,7 +42,7 @@ class Schedule extends React.Component {
                           Name
                         </h2>
                       </div>
-                      <div class="p-4 sm:w-3/4 w-full">
+                      <div class="p-4 sm:w-1/4 w-full">
                         <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900 header-css">
                           Description
                         </h2>
