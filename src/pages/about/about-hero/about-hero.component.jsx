@@ -15,7 +15,7 @@ const AboutHero = ({ heading, subtitle }) => (
         </h1>
         <p class="mb-8 leading-relaxed text-white">{subtitle}</p>
         <div class="flex justify-center">
-          <button class="inline-flex text-white border-0 py-2 px-6 focus:outline-none rounded text-lg">
+          <button class="inline-flex text-white border-0 py-2 mb-24 px-6 focus:outline-none rounded text-lg">
             Get to Know Us
           </button>
         </div>

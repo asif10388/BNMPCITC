@@ -57,7 +57,7 @@ const Hero = ({ heading, subtitle }) => {
               {heading}
             </h1>
             <p class="mb-8 leading-relaxed">{subtitle}</p>
-            <div class="flex justify-center py-4">
+            <div class="flex justify-center py-4 mb-24">
               <button class="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">
                 <ScrollLink
                   activeClass="active"
