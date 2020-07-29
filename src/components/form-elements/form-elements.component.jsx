@@ -7,7 +7,7 @@ export const MyTextInput = ({ label, ...props }) => {
   return (
     <>
       <label
-        class="block text-gray-700 text-sm font-bold mb-2"
+        class="block text-white text-sm font-bold mb-2"
         htmlFor={props.id || props.name}
       >
         {label}
@@ -32,7 +32,7 @@ export const MySelect = ({ label, ...props }) => {
   return (
     <>
       <label
-        class="block text-gray-700 text-sm font-bold mb-2"
+        class="block text-white text-sm font-bold mb-2"
         htmlFor={props.id || props.name}
       >
         {label}

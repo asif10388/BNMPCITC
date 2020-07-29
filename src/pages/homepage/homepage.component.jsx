@@ -8,14 +8,28 @@ import Register from "../../components/register/register.component";
 
 import "./homepage.styles.scss";
 
-const Homepage = () => (
-  <div className="homepage">
-    <Hero />
-    <AboutSection />
-    <Features />
-    <Schedule />
-    <Register />
-  </div>
-);
+import "../../content/page-content";
+import PAGE_CONTENT from "../../content/page-content";
+
+const Homepage = () => {
+  return (
+    <div className="homepage">
+      <Hero
+        heading={PAGE_CONTENT[0].contentHeading}
+        subtitle={PAGE_CONTENT[0].contentDescription}
+      />
+      <AboutSection
+        heading={PAGE_CONTENT[1].contentHeading}
+        subtitle={PAGE_CONTENT[1].contentDescription}
+      />
+      <Features
+        heading={PAGE_CONTENT[2].contentHeading}
+        subtitle={PAGE_CONTENT[2].contentDescription}
+      />
+      <Schedule />
+      <Register />
+    </div>
+  );
+};
 
 export default Homepage;

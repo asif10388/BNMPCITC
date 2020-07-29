@@ -4,7 +4,7 @@ import ScheduleEvent from "./schedule-event/schedule-event.component";
 import SCHEDULE_DETAILS_DAY_1 from "./schedule.data.day-1";
 import SCHEDULE_DETAILS_DAY_2 from "./schedule.data.day-2";
 
-import Tabs from "./tabs/tabs.component";
+import Tabs from "../tab-component/tabs/tabs.component";
 
 import "./schedule.styles.scss";
 

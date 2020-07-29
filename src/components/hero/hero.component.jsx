@@ -6,32 +6,33 @@ import "./hero.styles.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Hero = () => {
+const Hero = ({ heading, subtitle }) => {
   let heroLogo = useRef(null);
   let heroSection = useRef(null);
 
-  useEffect(() => {
-    gsap.fromTo(heroLogo, 0.2, { y: 18 }, { y: -18, yoyo: true, repeat: -1 });
-  }, []);
+  // useEffect(() => {
+  //   gsap.fromTo(heroLogo, 0.2, { y: 18 }, { y: -18, yoyo: true, repeat: -1 });
+  // }, []);
 
-  useEffect(() => {
-    TweenMax.to(heroLogo, 1, {
-      repeat: -1,
-      rotation: 360,
-      ease: Linear.easeNone,
-    });
-  }, []);
+  // useEffect(() => {
+  //   TweenMax.to(heroLogo, 1, {
+  //     repeat: -1,
+  //     rotation: 360,
+  //     ease: Linear.easeNone,
+  //   });
+  // }, []);
 
   function scaleUp() {
     TweenMax.to(heroLogo, 1, {
       scale: 1.25,
-      ease: Linear.ease,
+      ease: Power3.easeOut,
     });
   }
 
   function scaleDown() {
     TweenMax.to(heroLogo, 1, {
-      scale: 0.75,
+      scale: 1,
+      ease: Power3.easeOut,
     });
   }
 
@@ -53,14 +54,9 @@ const Hero = () => {
           />
           <div class="text-center lg:w-2/3 w-full">
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium">
-              Welcome To TechnoCloud Carnival
+              {heading}
             </h1>
-            <p class="mb-8 leading-relaxed">
-              Join us for an extensive three day online festival packed with
-              challenging and entertaining events and games. Participate in
-              online events and win amazing prizes and be a part of the BNMPC IT
-              Club Community!
-            </p>
+            <p class="mb-8 leading-relaxed">{subtitle}</p>
             <div class="flex justify-center py-4">
               <button class="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">
                 <ScrollLink

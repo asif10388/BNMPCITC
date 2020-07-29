@@ -11,7 +11,7 @@ import "./features.styles.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Features = () => {
+const Features = ({ heading, subtitle }) => {
   let feature1 = useRef(null);
   let feature2 = useRef(null);
   let feature3 = useRef(null);
@@ -42,12 +42,10 @@ const Features = () => {
         <div class="container px-5 py-24 mx-auto">
           <div class="text-center mb-20">
             <h1 class="sm:text-4xl text-3xl font-medium title-font text-gray-900 mb-4">
-              Bring Your Talents to the Table
+              {heading}
             </h1>
             <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-              TechnoCloud isn't just any online event. It will let you bring out
-              your inner potential and let you get creative with just about
-              anything because we focus on the following things
+              {subtitle}
             </p>
             <div class="flex mt-6 justify-center">
               <div class="w-16 h-1 rounded-full bg-blue-500 inline-flex"></div>

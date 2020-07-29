@@ -1,7 +1,9 @@
 @import "../../variables.scss";
-
+//linear-gradient(315deg, #2876f9 0%, #0a1e7c 74%);
 .hero {
-  background-image: linear-gradient(315deg, #2876f9 0%, #0a1e7c 74%);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../../images/bg-4.png") no-repeat fixed center center;
+  background-size: cover;
   min-height: 90vh;
   color: white;
   button {
