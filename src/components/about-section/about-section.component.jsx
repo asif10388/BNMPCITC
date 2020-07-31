@@ -7,24 +7,34 @@ gsap.registerPlugin(ScrollTrigger);
 
 const AboutSection = ({ heading, subtitle }) => {
   let aboutSectionImage = useRef(null);
+  let aboutSectionContent = useRef(null);
   let container = useRef(null);
 
-  // useEffect(() => {
-  //   let tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: container,
-  //       pin: false,
-  //       start: "top top", // when the top of the trigger hits the top of the viewport
-  //       end: "+=100", // end after scrolling 500px beyond the start
-  //       scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-  //     },
-  //   });
-  //   tl.from(aboutSectionImage, 1, {
-  //     x: 200,
-  //     autoAlpha: 0,
-  //     ease: "power1.inOut",
-  //   });
-  // }, []);
+  useEffect(() => {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: container,
+        pin: false,
+      },
+    });
+    tl.from(aboutSectionImage, 1, {
+      x: 200,
+      autoAlpha: 0,
+      ease: "power3.In",
+    }).from(aboutSectionContent, {
+      x: -200,
+      autoAlpha: 0,
+      ease: "power3.In",
+    });
+    gsap.to(aboutSectionImage, {
+      yPercent: 50,
+      ease: "none",
+      scrollTrigger: {
+        trigger: container,
+        scrub: true,
+      },
+    });
+  }, []);
 
   return (
     <div
@@ -34,7 +44,12 @@ const AboutSection = ({ heading, subtitle }) => {
     >
       <section class="text-gray-700 body-font">
         <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-          <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <div
+            class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+            ref={(section) => {
+              aboutSectionContent = section;
+            }}
+          >
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
               {heading}
             </h1>
@@ -52,7 +67,7 @@ const AboutSection = ({ heading, subtitle }) => {
               }}
               class="object-cover object-center rounded"
               alt="hero"
-              src="https://jesmachi.sirv.com/img/nat-3.jpg"
+              src="https://jesmachi.sirv.com/bnmpcitc/gallery/TECHNOBIT%2018%20(282).JPG"
             />
           </div>
         </div>

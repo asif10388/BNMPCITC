@@ -21,7 +21,7 @@ const About = () => (
       heading={PAGE_CONTENT[6].contentHeading}
       subtitle={PAGE_CONTENT[6].contentDescription}
     />
-    <FullbleedImage bgImage={require("../../images/wallmagazine.jpg")} />
+    <FullbleedImage bgImage="https://jesmachi.sirv.com/bnmpcitc/gallery/wallmagazine.jpg" />
     <AboutActivities heading={PAGE_CONTENT[7].contentHeading} />
     <AboutTeam />
   </div>

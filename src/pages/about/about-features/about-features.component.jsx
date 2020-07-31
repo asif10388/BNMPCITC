@@ -56,7 +56,7 @@ const AboutFeatures = ({ heading, subtitle }) => {
                 feature1 = feature;
               }}
             >
-              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-5 flex-shrink-0">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full feature-bg-color text-white mb-5 flex-shrink-0">
                 <FontAwesomeIcon icon={faRobot} size="2x" />
               </div>
               <div class="flex-grow">
@@ -76,7 +76,7 @@ const AboutFeatures = ({ heading, subtitle }) => {
                 feature2 = feature;
               }}
             >
-              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-5 flex-shrink-0">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full feature-bg-color text-white mb-5 flex-shrink-0">
                 <FontAwesomeIcon icon={faCode} size="2x" />
               </div>
               <div class="flex-grow">
@@ -96,7 +96,7 @@ const AboutFeatures = ({ heading, subtitle }) => {
                 feature3 = feature;
               }}
             >
-              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-5 flex-shrink-0">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full feature-bg-color text-white mb-5 flex-shrink-0">
                 <FontAwesomeIcon icon={faPaintBrush} size="2x" />
               </div>
               <div class="flex-grow">
@@ -116,7 +116,7 @@ const AboutFeatures = ({ heading, subtitle }) => {
                 feature4 = feature;
               }}
             >
-              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-5 flex-shrink-0">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full feature-bg-color text-white mb-5 flex-shrink-0">
                 <FontAwesomeIcon icon={faGamepad} size="2x" />
               </div>
               <div class="flex-grow">

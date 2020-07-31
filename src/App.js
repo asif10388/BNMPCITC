@@ -11,13 +11,12 @@ import Header from "./components/header/header.component";
 import Schedule from "./components/schedule/schedule.component";
 import Register from "./components/register/register.component";
 import Footer from "./components/footer/footer.component";
-import SuccessRedirect from "./components/success-redirect/success-redirect.component";
 
 import "./variables.scss";
 
 const App = () => (
   <Router>
-    <div>
+    <div className="master">
       <Header />
       <Switch>
         <Route exact path="/" component={Homepage} />
@@ -28,7 +27,6 @@ const App = () => (
         <Route exact path="/register" component={Register} />
         <Route exact path="/submit" component={Submission} />
         <Route exact path="/contact" component={Contact} />
-        <Route exact path="/success" component={SuccessRedirect} />
       </Switch>
       <Footer />
     </div>

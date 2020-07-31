@@ -1,11 +1,15 @@
 @import "../../variables.scss";
 
-// .register-body {
-//   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-//     url("../../images/bg-7.png") no-repeat fixed center center;
-//   background-size: cover;
-// }
+.register-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://jesmachi.sirv.com/bnmpcitc/backgrounds/bg-10.jpg") no-repeat
+      fixed center center;
+  background-size: cover;
+}
 
 .custom-button {
-  background-color: $color-primary;
+  background-color: $color-secondary-light;
+  font-family: $cta-font;
+  font-weight: bold;
+  color: black;
 }

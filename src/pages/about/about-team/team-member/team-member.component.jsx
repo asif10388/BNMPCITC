@@ -4,7 +4,7 @@ import "./team-member.styles.scss";
 const TeamMember = ({ name, designation }) => {
   return (
     <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-      <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+      <div class="h-full flex items-center custom-border p-4 rounded-lg">
         <img
           alt="team"
           class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
@@ -18,6 +18,7 @@ const TeamMember = ({ name, designation }) => {
               class="text-gray-500"
               href="https://www.facebook.com/bnmpc.itc/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 fill="currentColor"

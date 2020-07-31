@@ -2,68 +2,80 @@ import React from "react";
 import "./contact.styles.scss";
 
 const Contact = () => (
-  <div>
-    <section class="text-gray-700 body-font relative">
-      <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-col text-center w-full mb-12">
-          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-            Contact Us
-          </h1>
-          <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-            gentrify.
-          </p>
-        </div>
-        <div class="lg:w-1/2 md:w-2/3 mx-auto">
-          <div class="flex flex-wrap -m-2">
-            <div class="p-2 w-1/2">
-              <label
-                class="block text-gray-700 text-sm font-bold mb-2"
-                for="username"
-              >
-                Full Name
-              </label>
-              <input
-                class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-blue-500 text-base px-4 py-2"
-                placeholder="Name"
-                type="text"
-              />
-            </div>
-            <div class="p-2 w-1/2">
-              <label
-                class="block text-gray-700 text-sm font-bold mb-2"
-                for="email"
-              >
-                Email
-              </label>
-              <input
-                class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-blue-500 text-base px-4 py-2"
-                placeholder="Email"
-                type="email"
-              />
-            </div>
-            <div class="p-2 w-full">
-              <label
-                class="block text-gray-700 text-sm font-bold mb-2"
-                for="text"
-              >
-                Message
-              </label>
-              <textarea
-                class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none h-48 focus:border-blue-500 text-base px-4 py-2 resize-none block"
-                placeholder="Message"
-              ></textarea>
-            </div>
-            <div class="p-2 w-full">
-              <button class="flex mx-auto text-white border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg contact-form_button">
-                Submit
-              </button>
-            </div>
+  <section class="text-gray-700 body-font relative contact-body">
+    <div class="container px-5 py-24 mx-auto flex sm:flex-no-wrap flex-wrap">
+      <div class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.4022966194934!2d90.36869205040821!3d23.733029384522286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bf33f166b779%3A0x8568dda83da3b8a8!2sBir%20Shreshtha%20Noor%20Mohammad%20Public%20College!5e0!3m2!1sen!2sbd!4v1596149708296!5m2!1sen!2sbd"
+          width="100%"
+          height="100%"
+          marginheight="0"
+          marginwidth="0"
+          frameborder="0"
+          scrolling="no"
+          style={{ border: "0", filter: "contrast(0.8)" }}
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+          title="map"
+          class="absolute inset-0"
+        ></iframe>
+        <div class="bg-white relative flex flex-wrap py-6">
+          <div class="lg:w-1/2 px-6">
+            <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm">
+              ADDRESS
+            </h2>
+            <p class="leading-relaxed">
+              Birshreshtha Noor Mohammad Public College, Peelkhana, Newmarket
+              PO, Lalbagh PS, Dhaka 1205, Dhaka <br className="mb-5" /> EIIN -
+              108161 | School Code - 1217 | College Code - 1203
+            </p>
+          </div>
+          <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+            <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm">
+              EMAIL
+            </h2>
+            <a class="text-indigo-500 leading-relaxed">bnmpcitc@gmail.com</a>
+            <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mt-4">
+              PHONE
+            </h2>
+            <p class="leading-relaxed">01XXXXXXXX</p>
           </div>
         </div>
       </div>
-    </section>
-  </div>
+      <div class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 order-first sm:order-last">
+        <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">
+          Send Us a Nice Message :)
+        </h2>
+        <p class="leading-relaxed mb-5 text-gray-600">
+          {" "}
+          If you have any questions regarding our club or college, feel free to
+          ask us. We usually respond within a day as we have to study a lot :")
+        </p>
+        <input
+          class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4"
+          placeholder="Name"
+          type="text"
+        />
+        <input
+          class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4"
+          placeholder="Email"
+          type="email"
+        />
+        <textarea
+          class="bg-white rounded border border-gray-400 focus:outline-none h-32 focus:border-indigo-500 text-base px-4 py-2 mb-4 resize-none"
+          placeholder="Message"
+        ></textarea>
+        <button class="text-white contact-form_button border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+          Send Message
+        </button>
+        <p class="text-xs text-gray-500 mt-3">
+          BNMPC IT Club prevails with the view to propagate the features of IT
+          among the students.
+        </p>
+      </div>
+    </div>
+  </section>
 );
 
 export default Contact;

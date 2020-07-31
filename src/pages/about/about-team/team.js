@@ -189,7 +189,7 @@ const successorTeam = [
   },
   {
     id: 14,
-    name: "Farhan Labib",
+    name: "Fahad Khan",
     designation: "Assistant Secretary of Programming & Robotics",
   },
   {
