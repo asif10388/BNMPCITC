@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, createRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -9,6 +9,9 @@ gsap.registerPlugin(ScrollTrigger);
 const AboutActivities = ({ heading, subtitle }) => {
   let aboutSectionImage = useRef(null);
   let container = useRef(null);
+  let svgRef = useRef([]);
+  let textRef = useRef([]);
+  let lineRef = useRef([]);
 
   useEffect(() => {
     let tl = gsap.timeline({
@@ -17,12 +20,41 @@ const AboutActivities = ({ heading, subtitle }) => {
         pin: false,
       },
     });
-    tl.from(aboutSectionImage, 3, {
-      scale: 0.25,
-      delay: 0.8,
-      autoAlpha: 0,
-      ease: "power3.In",
-    });
+    tl.staggerFrom(
+      svgRef.current,
+      1,
+      { delay: 0.8, scale: 0, ease: "power3.In" },
+      0.3
+    )
+      .staggerFrom(
+        lineRef.current,
+        1,
+        { delay: 0.8, height: 0, ease: "power3.In" },
+        0.3,
+        "-=3"
+      )
+      .staggerFrom(
+        textRef.current,
+        1,
+        {
+          x: 110,
+          autoAlpha: 0,
+          ease: "power3.In",
+        },
+        0.3,
+        "-=2"
+      )
+      .from(
+        aboutSectionImage,
+        2,
+        {
+          scale: 0.25,
+          delay: 0.8,
+          autoAlpha: 0,
+          ease: "power3.In",
+        },
+        "-=3.2"
+      );
   }, []);
 
   return (
@@ -37,9 +69,19 @@ const AboutActivities = ({ heading, subtitle }) => {
           <div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
             <div class="flex relative pb-12">
               <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div class="h-full w-1 bg-gray-400 pointer-events-none"></div>
+                <div
+                  class="h-full w-1 bg-gray-400 pointer-events-none"
+                  ref={(element) => {
+                    lineRef.current[0] = element;
+                  }}
+                ></div>
               </div>
-              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-400 inline-flex items-center justify-center text-white relative z-10">
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-full bg-green-400 inline-flex items-center justify-center text-white relative z-10"
+                ref={(element) => {
+                  svgRef.current[0] = element;
+                }}
+              >
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -53,7 +95,12 @@ const AboutActivities = ({ heading, subtitle }) => {
                   <path d="M22 4L12 14.01l-3-3"></path>
                 </svg>
               </div>
-              <div class="flex-grow pl-4">
+              <div
+                class="flex-grow pl-4"
+                ref={(element) => {
+                  textRef.current[0] = element;
+                }}
+              >
                 <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
                   Technobit 2018
                 </h2>
@@ -65,9 +112,19 @@ const AboutActivities = ({ heading, subtitle }) => {
             </div>
             <div class="flex relative pb-12">
               <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div class="h-full w-1 bg-gray-400 pointer-events-none"></div>
+                <div
+                  class="h-full w-1 bg-gray-400 pointer-events-none"
+                  ref={(element) => {
+                    lineRef.current[1] = element;
+                  }}
+                ></div>
               </div>
-              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-400 inline-flex items-center justify-center text-white relative z-10">
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-full bg-green-400 inline-flex items-center justify-center text-white relative z-10"
+                ref={(element) => {
+                  svgRef.current[1] = element;
+                }}
+              >
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -81,7 +138,12 @@ const AboutActivities = ({ heading, subtitle }) => {
                   <path d="M22 4L12 14.01l-3-3"></path>
                 </svg>
               </div>
-              <div class="flex-grow pl-4">
+              <div
+                class="flex-grow pl-4"
+                ref={(element) => {
+                  textRef.current[1] = element;
+                }}
+              >
                 <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
                   Technobit 2.0
                 </h2>
@@ -93,9 +155,19 @@ const AboutActivities = ({ heading, subtitle }) => {
             </div>
             <div class="flex relative pb-12">
               <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div class="h-full w-1 bg-gray-400 pointer-events-none"></div>
+                <div
+                  class="h-full w-1 bg-gray-400 pointer-events-none"
+                  ref={(element) => {
+                    lineRef.current[2] = element;
+                  }}
+                ></div>
               </div>
-              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-400 inline-flex items-center justify-center text-white relative z-10">
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-full bg-green-400 inline-flex items-center justify-center text-white relative z-10"
+                ref={(element) => {
+                  svgRef.current[2] = element;
+                }}
+              >
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -109,7 +181,12 @@ const AboutActivities = ({ heading, subtitle }) => {
                   <path d="M22 4L12 14.01l-3-3"></path>
                 </svg>
               </div>
-              <div class="flex-grow pl-4">
+              <div
+                class="flex-grow pl-4"
+                ref={(element) => {
+                  textRef.current[2] = element;
+                }}
+              >
                 <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
                   Benchmark 2020
                 </h2>
@@ -121,9 +198,19 @@ const AboutActivities = ({ heading, subtitle }) => {
             </div>
             <div class="flex relative pb-12">
               <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div class="h-full w-1 bg-gray-400 pointer-events-none"></div>
+                <div
+                  class="h-full w-1 bg-gray-400 pointer-events-none"
+                  ref={(element) => {
+                    lineRef.current[3] = element;
+                  }}
+                ></div>
               </div>
-              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-red-400 inline-flex items-center justify-center text-white relative z-10">
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-full bg-red-400 inline-flex items-center justify-center text-white relative z-10"
+                ref={(element) => {
+                  svgRef.current[3] = element;
+                }}
+              >
                 <svg
                   height="512pt"
                   viewBox="0 0 512 512"
@@ -140,7 +227,12 @@ const AboutActivities = ({ heading, subtitle }) => {
                   />
                 </svg>
               </div>
-              <div class="flex-grow pl-4">
+              <div
+                class="flex-grow pl-4"
+                ref={(element) => {
+                  textRef.current[3] = element;
+                }}
+              >
                 <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
                   Club Dying till 20Infinity
                 </h2>
@@ -152,7 +244,12 @@ const AboutActivities = ({ heading, subtitle }) => {
               </div>
             </div>
             <div class="flex relative">
-              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-red-400 inline-flex items-center justify-center text-white relative z-10">
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-full bg-red-400 inline-flex items-center justify-center text-white relative z-10"
+                ref={(element) => {
+                  svgRef.current[4] = element;
+                }}
+              >
                 <svg
                   height="512pt"
                   viewBox="0 0 512 512"
@@ -169,7 +266,12 @@ const AboutActivities = ({ heading, subtitle }) => {
                   />
                 </svg>
               </div>
-              <div class="flex-grow pl-4">
+              <div
+                class="flex-grow pl-4"
+                ref={(element) => {
+                  textRef.current[4] = element;
+                }}
+              >
                 <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
                   Officially Dead
                 </h2>
@@ -178,7 +280,7 @@ const AboutActivities = ({ heading, subtitle }) => {
             </div>
           </div>
           <img
-            class="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12"
+            class="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12 activity-img"
             src="https://jesmachi.sirv.com/bnmpcitc/gallery/activity.jpg"
             alt="step"
             ref={(section) => {

@@ -17,50 +17,50 @@ const Gallery = () => (
             ephemeral journey. Below are some of the highlights of our journey.
           </p>
         </div>
-        <div class="flex flex-wrap md:-m-2 -m-1 image-effect">
-          <div class="flex flex-wrap w-1/2">
-            <div class="md:p-2 p-1 w-1/2">
+        <div class="flex flex-wrap md:m-2 m-1 image-effect">
+          <div class="flex flex-wrap w-full sm:w-1/2">
+            <div class="md:p-2 p-1 w-full sm:w-1/2">
               <img
                 alt="gallery"
                 class="w-full object-cover h-full object-center block"
-                src={require("../../images/gallerryimg1.JPG")}
+                src="https://jesmachi.sirv.com/bnmpcitc/gallery/gallerryimg1.JPG"
               />
             </div>
-            <div class="md:p-2 p-1 w-1/2">
+            <div class="md:p-2 p-1 w-full sm:w-1/2">
               <img
                 alt="gallery"
                 class="w-full object-cover h-full object-center block"
-                src={require("../../images/gallerryimg2.jpg")}
+                src="https://jesmachi.sirv.com/bnmpcitc/gallery/gallerryimg2.jpg"
               />
             </div>
             <div class="md:p-2 p-1 w-full">
               <img
                 alt="gallery"
                 class="w-full h-full object-cover object-center block"
-                src={require("../../images/gallerryimg3.JPG")}
+                src="https://jesmachi.sirv.com/bnmpcitc/gallery/gallerryimg3.JPG"
               />
             </div>
           </div>
-          <div class="flex flex-wrap w-1/2">
+          <div class="flex flex-wrap w-full sm:w-1/2">
             <div class="md:p-2 p-1 w-full">
               <img
                 alt="gallery"
                 class="w-full h-full object-cover object-center block"
-                src={require("../../images/gallerryimg4.JPG")}
+                src="https://jesmachi.sirv.com/bnmpcitc/gallery/gallerryimg4.JPG"
               />
             </div>
-            <div class="md:p-2 p-1 w-1/2">
+            <div class="md:p-2 p-1 w-full sm:w-1/2">
               <img
                 alt="gallery"
                 class="w-full object-cover h-full object-center block"
-                src={require("../../images/gallerryimg5.jpg")}
+                src="https://jesmachi.sirv.com/bnmpcitc/gallery/gallerryimg5.jpg"
               />
             </div>
-            <div class="md:p-2 p-1 w-1/2">
+            <div class="md:p-2 p-1 w-full sm:w-1/2">
               <img
                 alt="gallery"
                 class="w-full object-cover h-full object-center block"
-                src={require("../../images/gallerryimg6.JPG")}
+                src="https://jesmachi.sirv.com/bnmpcitc/gallery/gallerryimg6.JPG"
               />
             </div>
           </div>

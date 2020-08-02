@@ -1,73 +1,156 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
-import ReactNavbar from "react-responsive-animate-navbar";
 import "./header.styles.scss";
 
-const Header = () => (
-  <div className="header ">
-    <header>
-      <div class="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center">
-        <a
-          href="home"
-          class="flex flex-col sm:flex-row title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
-        >
-          <img
-            src="https://jesmachi.sirv.com/bnmpcitc/logo.png"
-            width="64"
-            height="64"
-            alt="logo"
-          />
-          <span class="ml-3 text-xl">
-            <RouterLink to="/">BNMPCITC</RouterLink>
-          </span>
-        </a>
-        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <RouterLink className="mr-5 hover:text-gray-900 nav-link" to="/">
+const Header = () => {
+  const [isToggled, toggle] = useState(false);
+  let linkRef = useRef([]);
+  let nav = useRef(null);
+
+  return (
+    <div class=" header relative mx-auto flex flex-wrap">
+      <div
+        className="hamburger"
+        onClick={() => {
+          toggle(!isToggled);
+        }}
+      >
+        <div className="barTop"></div>
+        <div className="barMiddle"></div>
+        <div className="barBot"></div>
+      </div>
+      <a class="flex title-font font-medium items-center justify-center text-gray-900 mb-4 md:mb-0">
+        <img
+          src="https://jesmachi.sirv.com/bnmpcitc/logo.png"
+          alt="logo"
+          width="64px"
+          height="64px"
+        />
+        <span class="ml-3 text-xl">BNMPCITC</span>
+      </a>
+      <nav
+        class={`md:ml-auto navbar ${isToggled ? "open" : ""}`}
+        ref={(element) => {
+          nav = element;
+        }}
+      >
+        <div className="nav-links">
+          <RouterLink
+            className={`mr-5 hover:text-gray-900 nav-link ${
+              isToggled ? "slideIn open" : ""
+            } `}
+            to="/"
+            ref={(element) => {
+              linkRef.current[0] = element;
+            }}
+            onClick={() => {
+              toggle(!isToggled);
+            }}
+          >
             Home
           </RouterLink>
           <RouterLink
-            className="mr-5 hover:text-gray-900 nav-link"
+            className={`mr-5 hover:text-gray-900 nav-link ${
+              isToggled ? "slideIn open" : ""
+            }`}
             to="/schedule"
+            ref={(element) => {
+              linkRef.current[1] = element;
+            }}
+            onClick={() => {
+              toggle(!isToggled);
+            }}
           >
             Schedule
           </RouterLink>
           <RouterLink
-            className="mr-5 hover:text-gray-900 nav-link"
+            className={`mr-5 hover:text-gray-900 nav-link ${
+              isToggled ? "slideIn open" : ""
+            }`}
             to="/events"
+            ref={(element) => {
+              linkRef.current[2] = element;
+            }}
+            onClick={() => {
+              toggle(!isToggled);
+            }}
           >
             Events
           </RouterLink>
-          <RouterLink className="mr-5 hover:text-gray-900 nav-link" to="/about">
+          <RouterLink
+            className={`mr-5 hover:text-gray-900 nav-link ${
+              isToggled ? "slideIn open" : ""
+            }`}
+            to="/about"
+            ref={(element) => {
+              linkRef.current[3] = element;
+            }}
+            onClick={() => {
+              toggle(!isToggled);
+            }}
+          >
             About
           </RouterLink>
           <RouterLink
-            className="mr-5 hover:text-gray-900 nav-link"
+            className={`mr-5 hover:text-gray-900 nav-link ${
+              isToggled ? "slideIn open" : ""
+            }`}
             to="/gallery"
+            ref={(element) => {
+              linkRef.current[4] = element;
+            }}
+            onClick={() => {
+              toggle(!isToggled);
+            }}
           >
             Gallery
           </RouterLink>
           <RouterLink
-            className="mr-5 hover:text-gray-900 nav-link"
+            className={`mr-5 hover:text-gray-900 nav-link ${
+              isToggled ? "slideIn open" : ""
+            }`}
             to="/register"
+            ref={(element) => {
+              linkRef.current[5] = element;
+            }}
+            onClick={() => {
+              toggle(!isToggled);
+            }}
           >
             Register
           </RouterLink>
           <RouterLink
-            className="mr-5 hover:text-gray-900 nav-link"
+            className={`mr-5 hover:text-gray-900 nav-link ${
+              isToggled ? "slideIn open" : ""
+            }`}
             to="/submit"
+            ref={(element) => {
+              linkRef.current[6] = element;
+            }}
+            onClick={() => {
+              toggle(!isToggled);
+            }}
           >
             Submit
           </RouterLink>
           <RouterLink
-            className="mr-5 hover:text-gray-900 nav-link"
+            className={`mr-5 hover:text-gray-900 nav-link ${
+              isToggled ? "slideIn open" : ""
+            }`}
             to="/contact"
+            ref={(element) => {
+              linkRef.current[7] = element;
+            }}
+            onClick={() => {
+              toggle(!isToggled);
+            }}
           >
             Contact
           </RouterLink>
-        </nav>
-      </div>
-    </header>
-  </div>
-);
+        </div>
+      </nav>
+    </div>
+  );
+};
 
 export default Header;

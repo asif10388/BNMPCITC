@@ -1,7 +1,9 @@
 @import "../../variables.scss";
+section .img {
+  width: 100%;
+  height: 100%;
+}
 
-.custom-classes {
-  background-color: $color-primary;
-  font-family: $cta-font;
-  font-weight: bold;
+.about {
+  overflow: hidden;
 }

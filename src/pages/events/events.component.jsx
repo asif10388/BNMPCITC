@@ -1,4 +1,5 @@
 import React from "react";
+import CustomButton from "../../components/custom-button/custom-button.component";
 import "./events.styles.scss";
 
 const Events = () => (
@@ -50,12 +51,9 @@ const Events = () => (
                 paleo intelligentsia pabst before they sold out four loko. 3
                 wolf moon brooklyn.
               </p>
-              <button
-                class="inline-flex items-center text-white border-0 my-8 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg custom-event-button"
-                type="submit"
-              >
+              <CustomButton isPrimary type="submit">
                 Participate Now!
-              </button>
+              </CustomButton>
             </div>
           </div>
         </div>

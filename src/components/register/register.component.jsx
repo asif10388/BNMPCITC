@@ -6,6 +6,7 @@ import {
   MyTextInput,
   MySelect,
 } from "../form-elements/form-elements.component";
+import CustomButton from "../custom-button/custom-button.component";
 import "./register.styles.scss";
 
 class Register extends React.Component {
@@ -145,12 +146,9 @@ class Register extends React.Component {
                     </MySelect>
                   </div>
                   <div class="p-2 w-full">
-                    <button
-                      class="flex mx-auto border-0 my-8 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg custom-button"
-                      type="submit"
-                    >
+                    <CustomButton isRegisterAndSubmit type="submit">
                       Let's Do This
-                    </button>
+                    </CustomButton>
                   </div>
                 </Form>
               </div>

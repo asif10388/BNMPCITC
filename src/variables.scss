@@ -26,8 +26,8 @@ $default-font: "Jost";
 
 * {
   font-family: $default-font;
+  // overflow-x: hidden;
 }
-
 .master {
   background-color: $master-color;
 }

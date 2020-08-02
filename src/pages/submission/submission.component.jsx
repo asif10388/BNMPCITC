@@ -3,6 +3,7 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { db } from "../../firebase/firebase.utils";
 import { MyTextInput } from "../../components/form-elements/form-elements.component";
+import CustomButton from "../../components/custom-button/custom-button.component";
 import "./submission.styles.scss";
 
 class Submission extends React.Component {
@@ -111,12 +112,9 @@ class Submission extends React.Component {
                   </div>
                   <div class="p-2 w-3/4 sm:w-1/2"></div>
                   <div class="p-2 w-full">
-                    <button
-                      class="flex mx-auto text-black custom-submit-button border-0 my-8 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg"
-                      type="submit"
-                    >
+                    <CustomButton isRegisterAndSubmit>
                       Submit Project
-                    </button>
+                    </CustomButton>
                   </div>
                 </Form>
               </div>

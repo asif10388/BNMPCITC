@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import "./schedule-event.styles.scss";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import CustomButton from "../../custom-button/custom-button.component";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,9 +53,7 @@ const ScheduleEvent = ({ eventTime, eventName, description }) => {
               <p class="leading-relaxed sm:text-xl">{description}</p>
             </div>
             <div class="p-4 lg:w-1/4 w-full">
-              <button class="border-0 py-2 px-6 focus:outline-none hover:bg-gray-400 rounded schedule_read-more_button">
-                Read More
-              </button>
+              <CustomButton isRegular>Read More</CustomButton>
             </div>
           </div>
         </div>

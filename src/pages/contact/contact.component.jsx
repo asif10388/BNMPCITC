@@ -1,4 +1,5 @@
 import React from "react";
+import CustomButton from "../../components/custom-button/custom-button.component";
 import "./contact.styles.scss";
 
 const Contact = () => (
@@ -43,7 +44,7 @@ const Contact = () => (
           </div>
         </div>
       </div>
-      <div class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 order-first sm:order-last">
+      <div class=" p-12 rounded lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 order-first sm:order-last">
         <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">
           Send Us a Nice Message :)
         </h2>
@@ -66,9 +67,7 @@ const Contact = () => (
           class="bg-white rounded border border-gray-400 focus:outline-none h-32 focus:border-indigo-500 text-base px-4 py-2 mb-4 resize-none"
           placeholder="Message"
         ></textarea>
-        <button class="text-white contact-form_button border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-          Send Message
-        </button>
+        <CustomButton isPrimary>Send Message</CustomButton>
         <p class="text-xs text-gray-500 mt-3">
           BNMPC IT Club prevails with the view to propagate the features of IT
           among the students.

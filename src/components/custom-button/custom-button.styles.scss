@@ -1,0 +1,35 @@
+@import "../../variables.scss";
+
+.primary-button {
+  background-color: $color-primary;
+  color: white;
+}
+
+.secondary-button {
+  background-color: $color-secondary-light;
+  color: black;
+}
+
+.regular-button {
+  background-color: #edf2f7;
+  color: #1a202c;
+  &:hover {
+    background-color: #e2e8f0;
+  }
+}
+
+.default-button-styles {
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $cta-font;
+  font-weight: bold;
+  font-size: 1.125rem;
+  border-width: 0;
+  text-align: center;
+  &:focus {
+    outline: none;
+  }
+}
