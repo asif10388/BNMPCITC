@@ -41,10 +41,10 @@ const Header = () => {
           <RouterLink
             className={`mr-5 hover:text-gray-900 nav-link ${
               isToggled ? "slideIn open" : ""
-            } `}
+            }`}
             to="/"
             ref={(element) => {
-              linkRef.current[0] = element;
+              linkRef.current[3] = element;
             }}
             onClick={() => {
               toggle(!isToggled);
@@ -55,17 +55,18 @@ const Header = () => {
           <RouterLink
             className={`mr-5 hover:text-gray-900 nav-link ${
               isToggled ? "slideIn open" : ""
-            }`}
-            to="/about"
+            } `}
+            to="/event"
             ref={(element) => {
-              linkRef.current[3] = element;
+              linkRef.current[0] = element;
             }}
             onClick={() => {
               toggle(!isToggled);
             }}
           >
-            About
+            Event
           </RouterLink>
+
           <RouterLink
             className={`mr-5 hover:text-gray-900 nav-link ${
               isToggled ? "slideIn open" : ""

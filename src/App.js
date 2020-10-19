@@ -16,8 +16,8 @@ const App = () => (
     <div className="master">
       <Header />
       <Switch>
-        <Route exact path="/" component={Homepage} />
-        <Route exact path="/about" component={About} />
+        <Route exact path="/event" component={Homepage} />
+        <Route exact path="/" component={About} />
         <Route exact path="/gallery" component={Gallery} />
         <Route exact path="/contact" component={Contact} />
       </Switch>
