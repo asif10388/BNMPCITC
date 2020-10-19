@@ -30,17 +30,17 @@ class AboutTeam extends React.Component {
               </p>
             </div>
             <Tabs>
-              <div label="The Peaky Blinders">
+              <div label="The Board">
                 {coreTeam.map(({ id, ...collectionProps }) => (
                   <TeamMember key={id} {...collectionProps} />
                 ))}
               </div>
-              <div label="The Boro Bhais">
+              <div label="The Formers">
                 {foundingTeam.map(({ id, ...collectionProps }) => (
                   <TeamMember key={id} {...collectionProps} />
                 ))}
               </div>
-              <div label="The Chunoputis">
+              <div label="The Successors">
                 {successorTeam.map(({ id, ...collectionProps }) => (
                   <TeamMember key={id} {...collectionProps} />
                 ))}

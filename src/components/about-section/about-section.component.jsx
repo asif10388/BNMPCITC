@@ -71,7 +71,7 @@ const AboutSection = ({ heading, subtitle }) => {
               }}
               class="object-cover object-center rounded img"
               alt="hero"
-              src="https://jesmachi.sirv.com/bnmpcitc/gallery/TECHNOBIT%2018%20(282).JPG"
+              src={require("../../images/TECHNOBIT 18 (282).JPG")}
             />
           </div>
         </div>

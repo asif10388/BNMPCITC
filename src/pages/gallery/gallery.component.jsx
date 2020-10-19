@@ -23,21 +23,21 @@ const Gallery = () => (
               <img
                 alt="gallery"
                 class="w-full object-cover h-full object-center block"
-                src="https://jesmachi.sirv.com/bnmpcitc/gallery/gallerryimg1.JPG"
+                src={require("../../images/gallerryimg1.JPG")}
               />
             </div>
             <div class="md:p-2 p-1 w-full sm:w-1/2">
               <img
                 alt="gallery"
                 class="w-full object-cover h-full object-center block"
-                src="https://jesmachi.sirv.com/bnmpcitc/gallery/gallerryimg2.jpg"
+                src={require("../../images/gallerryimg2.jpg")}
               />
             </div>
             <div class="md:p-2 p-1 w-full">
               <img
                 alt="gallery"
                 class="w-full h-full object-cover object-center block"
-                src="https://jesmachi.sirv.com/bnmpcitc/gallery/gallerryimg3.JPG"
+                src={require("../../images/gallerryimg3.JPG")}
               />
             </div>
           </div>
@@ -46,21 +46,21 @@ const Gallery = () => (
               <img
                 alt="gallery"
                 class="w-full h-full object-cover object-center block"
-                src="https://jesmachi.sirv.com/bnmpcitc/gallery/gallerryimg4.JPG"
+                src={require("../../images/gallerryimg4.JPG")}
               />
             </div>
             <div class="md:p-2 p-1 w-full sm:w-1/2">
               <img
                 alt="gallery"
                 class="w-full object-cover h-full object-center block"
-                src="https://jesmachi.sirv.com/bnmpcitc/gallery/gallerryimg5.jpg"
+                src={require("../../images/gallerryimg5.jpg")}
               />
             </div>
             <div class="md:p-2 p-1 w-full sm:w-1/2">
               <img
                 alt="gallery"
                 class="w-full object-cover h-full object-center block"
-                src="https://jesmachi.sirv.com/bnmpcitc/gallery/gallerryimg6.JPG"
+                src={require("../../images/gallerryimg6.JPG")}
               />
             </div>
           </div>

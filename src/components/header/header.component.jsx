@@ -19,7 +19,10 @@ const Header = () => {
         <div className="barMiddle"></div>
         <div className="barBot"></div>
       </div>
-      <a class="flex title-font font-medium items-center justify-center text-gray-900 mb-4 md:mb-0">
+      <RouterLink
+        to="/"
+        class="flex title-font font-medium items-center justify-center text-gray-900 mb-4 md:mb-0"
+      >
         <img
           src="https://jesmachi.sirv.com/bnmpcitc/logo.png"
           alt="logo"
@@ -27,7 +30,7 @@ const Header = () => {
           height="64px"
         />
         <span class="ml-3 text-xl">BNMPCITC</span>
-      </a>
+      </RouterLink>
       <nav
         class={`md:ml-auto navbar ${isToggled ? "open" : ""}`}
         ref={(element) => {
@@ -48,34 +51,6 @@ const Header = () => {
             }}
           >
             Home
-          </RouterLink>
-          <RouterLink
-            className={`mr-5 hover:text-gray-900 nav-link ${
-              isToggled ? "slideIn open" : ""
-            }`}
-            to="/schedule"
-            ref={(element) => {
-              linkRef.current[1] = element;
-            }}
-            onClick={() => {
-              toggle(!isToggled);
-            }}
-          >
-            Schedule
-          </RouterLink>
-          <RouterLink
-            className={`mr-5 hover:text-gray-900 nav-link ${
-              isToggled ? "slideIn open" : ""
-            }`}
-            to="/events"
-            ref={(element) => {
-              linkRef.current[2] = element;
-            }}
-            onClick={() => {
-              toggle(!isToggled);
-            }}
-          >
-            Events
           </RouterLink>
           <RouterLink
             className={`mr-5 hover:text-gray-900 nav-link ${
@@ -104,34 +79,6 @@ const Header = () => {
             }}
           >
             Gallery
-          </RouterLink>
-          <RouterLink
-            className={`mr-5 hover:text-gray-900 nav-link ${
-              isToggled ? "slideIn open" : ""
-            }`}
-            to="/register"
-            ref={(element) => {
-              linkRef.current[5] = element;
-            }}
-            onClick={() => {
-              toggle(!isToggled);
-            }}
-          >
-            Register
-          </RouterLink>
-          <RouterLink
-            className={`mr-5 hover:text-gray-900 nav-link ${
-              isToggled ? "slideIn open" : ""
-            }`}
-            to="/submit"
-            ref={(element) => {
-              linkRef.current[6] = element;
-            }}
-            onClick={() => {
-              toggle(!isToggled);
-            }}
-          >
-            Submit
           </RouterLink>
           <RouterLink
             className={`mr-5 hover:text-gray-900 nav-link ${

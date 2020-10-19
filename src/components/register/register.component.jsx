@@ -1,7 +1,6 @@
 import React from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import { db } from "../../firebase/firebase.utils";
 import {
   MyTextInput,
   MySelect,
@@ -55,51 +54,19 @@ class Register extends React.Component {
           })}
           onSubmit={(values, { setSubmitting, resetForm }) => {
             setTimeout(() => {
-              console.log(values);
-
-              var fetchedRef = db
-                .collection("participant_Data")
-                .doc(values.email);
-
-              fetchedRef
-                .get()
-                .then(function (doc) {
-                  if (doc.exists) {
-                    alert("A participant with that email already exists");
-                    resetForm({});
-                  } else {
-                    const docRef = db.doc(`participant_Data/${values.email}`);
-                    docRef
-                      .set({
-                        participantData: values,
-                      })
-                      .then(() => {
-                        console.log(
-                          "Document written with ID: ",
-                          values.fullname
-                        );
-                      })
-                      .catch(function (error) {
-                        console.error("Error adding document: ", error);
-                      });
-                    alert("Thank you for registering");
-
-                    resetForm({});
-                  }
-                })
-                .catch(function (error) {
-                  console.log("error", error);
-                });
-              this.setState({ isSubmitted: true });
+              alert("Form submission is temporarily disabled");
               setSubmitting(false);
+              resetForm();
             }, 400);
           }}
         >
-          <section class="text-white relative register-section sm:rounded-lg sm:mx-24 mt-12 mb-12">
+          <section class="relative register-section sm:rounded-lg sm:mx-24 mt-12 mb-12">
             <div class="container py-12 mx-auto ">
               <div class="flex flex-col text-center w-full mb-12">
-                <h1 class="sm:text-5xl text-3xl mb-4">Register Now!</h1>
-                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                <h1 class="text-white sm:text-5xl text-3xl mb-4">
+                  Register Now!
+                </h1>
+                <p class="text-white lg:w-2/3 mx-auto leading-relaxed text-base">
                   What are you waiting for? Come join us on this adventure and
                   be a part of something challenging.
                 </p>

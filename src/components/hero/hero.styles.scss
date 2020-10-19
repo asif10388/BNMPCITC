@@ -1,8 +1,7 @@
 @import "../../variables.scss";
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("https://jesmachi.sirv.com/bnmpcitc/backgrounds/bg-4.jpg") no-repeat
-      fixed center center;
+    url("../../images/bg-4.jpg") no-repeat fixed center center;
   background-size: cover;
   color: white;
 }

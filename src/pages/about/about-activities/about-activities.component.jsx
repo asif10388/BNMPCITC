@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, createRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -234,12 +234,11 @@ const AboutActivities = ({ heading, subtitle }) => {
                 }}
               >
                 <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-                  Club Dying till 20Infinity
+                  Upcoming Event
                 </h2>
                 <p class="leading-relaxed">
-                  With the departure of the successor team, there is none to
-                  uplaod the club legacy. So the club has started to fade into
-                  the abyss
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tenetur voluptate asperiores, quasi sequi
                 </p>
               </div>
             </div>
@@ -273,15 +272,18 @@ const AboutActivities = ({ heading, subtitle }) => {
                 }}
               >
                 <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-                  Officially Dead
+                  Upcoming Event
                 </h2>
-                <p class="leading-relaxed">Lalalalalala</p>
+                <p class="leading-relaxed">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatem commodi,!
+                </p>
               </div>
             </div>
           </div>
           <img
             class="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12 activity-img"
-            src="https://jesmachi.sirv.com/bnmpcitc/gallery/activity.jpg"
+            src={require("../../../images/activity.jpg")}
             alt="step"
             ref={(section) => {
               aboutSectionImage = section;
